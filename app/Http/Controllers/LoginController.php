@@ -21,13 +21,13 @@ class LoginController extends Controller implements LoginControllerImpl
 
     public function logout()
     {
-        // TODO: Implement logout() method.
+        Session::flush();
+        return redirect('/');
     }
 
     public function authenticate(Request $request)
     {
         return view('cms/home/home');
-        // TODO: Implement login() method.
     }
 
     public function isLogin()
