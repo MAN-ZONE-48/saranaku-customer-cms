@@ -25,6 +25,14 @@ Route::prefix('/stock-management')->group(function(){
 
 });
 
+Route::prefix('/transaction-management')->group(function(){
+    Route::get('/cashier', 'CashierController@getPage');
+});
+
+Route::prefix('/cms-home')->group(function(){
+
+});
+
 
 //View Only
 Route::view('/home', 'dashboard/home');
