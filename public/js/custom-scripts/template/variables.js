@@ -1,0 +1,1 @@
+var spinner = $('#spinner-loading');
