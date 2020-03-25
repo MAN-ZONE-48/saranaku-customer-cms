@@ -118,3 +118,23 @@
   z-index: 9998;
 }
 
+body {
+  overflow: hidden;
+  font-family: "Exo 2", sans-serif;
+}
+
+.font-exo {
+  font-family: "Exo 2", sans-serif;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+}
+
+/*Maintain Background color after push*/
+
+body.pushable > .pusher {
+  background: #202020;
+}
+
