@@ -3,54 +3,31 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Home - @yield('title')</title>
+    <title>Saranaku App</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Saranaku - Your management friend</title>
 
-    @yield('css_before')
-    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/bootstrap/mdb.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/semantic-ui/semantic.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/fawesome/all.css') }}" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet" />
 
-    <style>
-        body{
-            overflow: hidden;
-            font-family: 'Exo 2', sans-serif;
-        }
-
-        .font-exo{
-            font-family: 'Exo 2', sans-serif;
-        }
-
-        div{
-            padding: 0;
-            margin: 0;
-        }
-    </style>
-
-    @yield('css_after')
-
     <script type="text/javascript" src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('js/semantic.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('js/fawesome/all.js') }}"></script>
-    @yield('js_before')
-<body>
-    <div id="spinner-loading" class="ui segment d-none">
-        <p></p>
-        <div class="ui active dimmer">
-            <div class="ui loader"></div>
-        </div>
-    </div>
 
+    <script type="text/javascript" src="{{ asset('js/custom-scripts/template/sidebar-setting.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/custom-scripts/template/spinner-settings.js')}}""></script>
+    <script type="text/javascript" src="{{ asset('js/custom-scripts/template/master.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/custom-scripts/template/ajax-config.js') }}"></script>
+<body style="background-color: #202020;">
     <div class="ui top vertical inverted sidebar labeled icon menu">
-        <a class="item">
+        <a class="item" onclick="">
             <i class="home icon"></i>
             Home
         </a>
@@ -58,7 +35,7 @@
             <i class="user icon"></i>
             Manage User
         </a>
-        <a class="item">
+        <a class="item" onclick="getPage(CASHIER)">
             <i class="shopping cart icon"></i>
             Cashier
         </a>
@@ -70,38 +47,65 @@
             <i class="money bill alternate outline icon"></i>
             Finance
         </a>
+        <a class="item">
+            <i class="cog icon"></i>
+            Settings
+        </a>
     </div>
 
+    {{-- <div id="spinner-loading" class="ui segment d-none">
+        <p></p>
+        <div class="ui active dimmer">
+            <div class="ui loader"></div>
+        </div>
+    </div> --}}
 
-
-    <div class="container-fluid pusher">
-        <div class="container">
-            <div class="ui inverted menu">
-                <button class="item ui primary button" onclick="exe()">
-                    <i class="th icon"></i>
-                </button>
-                <div class="header item">
-                    Saranaku
-                </div>
-                <div class="right menu">
-
-                    <a class="ui item">
-                        Logout
-                    </a>
-                </div>
+    <div class="pusher">
+        <div class="ui inverted menu">
+            <button class="item ui primary button" onclick="exe()">
+                <i class="th icon"></i>
+            </button>
+            <div class="header item">
+                Saranaku
+            </div>
+            <div class="right menu">
+    
+                <a class="ui item">
+                    Logout
+                </a>
             </div>
         </div>
 
-        @yield('content')
+        <div class="ui container">
+            <div id="spinner-loading" class="ui disabled dimmer">
+                <div class="ui loader"></div>
+            </div>
+            <span id="page-child">
+                <div class="ui grid">
+                    <div class="doubling sixteen column row">
+                        <div class="column">Hello</div>
+                        <div class="column">Saranaku</div>
+                        <div class="column">Lorem</div>
+                        <div class="column">Ipsum</div>
+                        <div class="column">Dolor</div>
+                        <div class="column">Sit</div>
+                        <div class="column">Amet</div>
+                        <div class="column">Ler</div>
+                        <div class="column">Lur</div>
+                        <div class="column">Lul</div>
+                        <div class="column">Lal</div>
+                        <div class="column">Saranaku</div>
+                        <div class="column">Lorem</div>
+                        <div class="column">Ipsum</div>
+                        <div class="column">Dolor</div>
+                        <div class="column">Dolor</div>
+                    </div>
+                </div>
+            </span>
+        </div>
     </div>
-    @yield('js_after')
 
-
-
-    <script type="text/javascript">
-        function exe(){
-            $('.ui.labeled.icon.sidebar').sidebar('toggle');
-        }
-    </script>
+    <script type="text/javascript" src="{{ asset('js/custom-scripts/url-list.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/custom-scripts/template/variables.js')}}"></script>
 </body>
 </html>
