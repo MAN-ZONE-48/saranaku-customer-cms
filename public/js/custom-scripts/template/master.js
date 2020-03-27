@@ -1,7 +1,5 @@
 //AJAX Page Request
-function getPage(uri){
-    exe();
-
+function getPageAjax(uri){
     $.ajax({
         type: "GET",
         url: uri,
@@ -15,7 +13,32 @@ function getPage(uri){
             loadingOff();
         },
         error: function(xhr, status, error){
-            alert("Request error!\n"+ xhr.status + " "+ xhr.statusText);
+            loadingOff();
+
+            console.log(xhr);
+            console.log(status);
+            console.log(error);
+
+            switch(xhr.status){
+                case 0: 
+                    $('#error-modal-no-connection').modal('show');
+                break;
+
+                case 404:
+                    dynamicError("Page Not Found", "Requested uri: "+uri+" is not found.");
+                break;
+                default:
+                    dynamicError(xhr.statusText, "Please check your FE");
+            }
         }
     });
+}
+
+function getPage(uri){
+    exe();
+    getPageAjax(uri);
+}
+
+function getPageWithoutLoading(uri){
+    getPageAjax(uri);
 }
