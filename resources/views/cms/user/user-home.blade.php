@@ -18,6 +18,7 @@
             </a>
         </div>
         <div class="column">
+            <a onclick="getPageAjax(USERLIST);">
             <div class="ui card">
                 <div class="content">
                     <div class="center aligned header">
@@ -31,6 +32,7 @@
                     </div>
                 </div>
             </div>
+            </a>
         </div>
         <div class="column">
             <div class="ui card">
