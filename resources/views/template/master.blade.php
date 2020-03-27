@@ -27,11 +27,11 @@
     <script type="text/javascript" src="{{ asset('js/custom-scripts/template/ajax-config.js') }}"></script>
 <body style="background-color: #202020;">
     <div class="ui top vertical inverted sidebar labeled icon menu">
-        <a class="item" onclick="">
+        <a class="item" onclick="getPage(HOME)">
             <i class="home icon"></i>
             Home
         </a>
-        <a class="item">
+        <a class="item" onclick="getPage(USER)">
             <i class="user icon"></i>
             Manage User
         </a>
@@ -81,25 +81,8 @@
                 <div class="ui loader"></div>
             </div>
             <span id="page-child">
-                <div class="ui grid">
-                    <div class="doubling sixteen column row">
-                        <div class="column">Hello</div>
-                        <div class="column">Saranaku</div>
-                        <div class="column">Lorem</div>
-                        <div class="column">Ipsum</div>
-                        <div class="column">Dolor</div>
-                        <div class="column">Sit</div>
-                        <div class="column">Amet</div>
-                        <div class="column">Ler</div>
-                        <div class="column">Lur</div>
-                        <div class="column">Lul</div>
-                        <div class="column">Lal</div>
-                        <div class="column">Saranaku</div>
-                        <div class="column">Lorem</div>
-                        <div class="column">Ipsum</div>
-                        <div class="column">Dolor</div>
-                        <div class="column">Dolor</div>
-                    </div>
+                <div class="h-90">
+
                 </div>
             </span>
         </div>
@@ -107,5 +90,18 @@
 
     <script type="text/javascript" src="{{ asset('js/custom-scripts/url-list.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/custom-scripts/template/variables.js')}}"></script>
+
+    <span id="modal-place">
+
+    </span>
+
+    @include('exceptions/no-connection-modal')
+
+    <script type="text/javascript" src="{{ asset('js/custom-scripts/template/exception.js')}}"></script>
+
+    <script type="text/javascript">
+        //Initialization
+        getPageAjax(HOME);
+    </script>
 </body>
 </html>
