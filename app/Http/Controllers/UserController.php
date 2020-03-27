@@ -11,4 +11,13 @@ class UserController extends Controller implements UserControllerImpl
     public function getPage(){
         return view('cms/user/user-home');
     }
+
+    public function getUserListPage(){
+        return view('cms/user/pages/user-list');
+    }
+
+    public function addUserPage(){
+        return view('cms/user/pages/add-user');
+    }
+
 }
