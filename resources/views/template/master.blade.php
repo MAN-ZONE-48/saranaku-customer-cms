@@ -69,8 +69,7 @@
                 Saranaku
             </div>
             <div class="right menu">
-    
-                <a class="ui item">
+                <a class="ui item" href="/auth/logout">
                     Logout
                 </a>
             </div>
@@ -81,9 +80,7 @@
                 <div class="ui loader"></div>
             </div>
             <span id="page-child">
-                <div class="h-90">
 
-                </div>
             </span>
         </div>
     </div>
@@ -101,7 +98,9 @@
 
     <script type="text/javascript">
         //Initialization
-        getPageAjax(HOME);
+        var currentPage = {!! json_encode($currentPage) !!};
+
+        getPageAjax(currentPage);
     </script>
 </body>
 </html>
