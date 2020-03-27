@@ -38,7 +38,3 @@ function getPage(uri){
     exe();
     getPageAjax(uri);
 }
-
-function getPageWithoutLoading(uri){
-    getPageAjax(uri);
-}
