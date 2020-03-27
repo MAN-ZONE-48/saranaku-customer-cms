@@ -30,7 +30,16 @@ Route::prefix('/transaction-management')->group(function(){
 });
 
 Route::prefix('/cms-home')->group(function(){
+    Route::get('/', 'HomeController@getPage');
+    Route::get('/home', 'HomeController@getHomePage');
+});
 
+Route::prefix('/master')->group(function(){
+    Route::get('/dynamic-error', 'TemplatePageController@getErrorMessage');
+});
+
+Route::prefix('user-management')->group(function(){
+    Route::get('/', 'UserController@getPage');
 });
 
 
