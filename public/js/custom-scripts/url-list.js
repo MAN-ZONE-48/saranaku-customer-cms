@@ -1,4 +1,8 @@
 const TRANSACTION = "/transaction-management/";
 const CASHIER = "/transaction-management/cashier";
+
+//User Management
 const USER = "/user-management/";
-const HOME = "/cms-home/home/";
+const USERLIST = "/user-management/list";
+
+const HOME = "/cms/home/";
