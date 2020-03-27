@@ -19,6 +19,7 @@ Route::prefix('/auth')->group(function(){
     Route::get('/login', 'LoginController@loginPage');
     //Authenticate
     Route::post('/login', 'LoginController@authenticate');
+    Route::get('/logout', 'LoginController@logout');
 });
 
 Route::prefix('/stock-management')->group(function(){
@@ -29,22 +30,26 @@ Route::prefix('/transaction-management')->group(function(){
     Route::get('/cashier', 'CashierController@getPage');
 });
 
-Route::prefix('/cms-home')->group(function(){
+Route::prefix('/cms')->group(function(){
     Route::get('/', 'HomeController@getPage');
     Route::get('/home', 'HomeController@getHomePage');
 });
 
 Route::prefix('/master')->group(function(){
     Route::get('/dynamic-error', 'TemplatePageController@getErrorMessage');
+
+    Route::put('/save-current-page', 'TemplatePageController@saveCurrentPage');
 });
 
 Route::prefix('user-management')->group(function(){
     Route::get('/', 'UserController@getPage');
+
+    Route::get('/list', 'UserController@getUserListPage');
+    Route::get('/addUser', 'UserController@addUserPage');
+
+    //Functions
 });
 
 
 //View Only
 Route::view('/home', 'dashboard/home');
-
-Route::get('/testGuzzle', 'TestController@get');
-
