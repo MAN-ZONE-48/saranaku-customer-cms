@@ -27,7 +27,8 @@ class LoginController extends Controller implements LoginControllerImpl
 
     public function authenticate(Request $request)
     {
-        return redirect('/cms-home');
+        Session::put('current_page', "/cms/home");
+        return redirect('/cms');
     }
 
     public function isLogin()
