@@ -36,8 +36,8 @@
             Manage User
         </a>
         <a class="item" onclick="getPage(CASHIER)">
-            <i class="shopping cart icon"></i>
-            Cashier
+            <i class="chart line icon"></i>
+            Transaction
         </a>
         <a class="item">
             <i class="clipboard list icon"></i>
@@ -50,6 +50,10 @@
         <a class="item">
             <i class="cog icon"></i>
             Settings
+        </a>
+        <a class="item">
+            <i class="question circle icon"></i>
+            Need Help?
         </a>
     </div>
 
