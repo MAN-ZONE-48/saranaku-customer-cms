@@ -6,9 +6,11 @@
         <td data-label="Phone">Co-Owner</td>
         <td data-label="Detail">
             <div class="ui icon buttons">
-                <button class="ui teal icon button">
-                    <i class="eye icon"></i>
-                </button>
+                <a onclick="getPageWithoutToggle(USERDETAIL)">
+                    <button class="ui teal icon button">
+                        <i class="eye icon"></i>
+                    </button>
+                </a>
                 <button class="ui red icon button">
                     <i class="trash alternate icon"></i>
                 </button>
@@ -22,9 +24,11 @@
         <td data-label="Phone">Co-Owner</td>
         <td data-label="Detail">
             <div class="ui icon buttons">
-                <button class="ui teal icon button">
-                    <i class="eye icon"></i>
-                </button>
+                <a onclick="getPageWithoutToggle(USERDETAIL)">
+                    <button class="ui teal icon button">
+                        <i class="eye icon"></i>
+                    </button>
+                </a>
                 <button class="ui red icon button">
                     <i class="trash alternate icon"></i>
                 </button>
@@ -38,9 +42,11 @@
         <td data-label="Phone">Owner</td>
         <td data-label="Detail">
             <div class="ui icon buttons">
-                <button class="ui teal icon button">
-                    <i class="eye icon"></i>
-                </button>
+                <a onclick="getPageWithoutToggle(USERDETAIL)">
+                    <button class="ui teal icon button">
+                        <i class="eye icon"></i>
+                    </button>
+                </a>
                 <button class="ui red icon button">
                     <i class="trash alternate icon"></i>
                 </button>
