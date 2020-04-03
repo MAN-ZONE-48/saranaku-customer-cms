@@ -48,6 +48,28 @@ Route::prefix('user-management')->group(function(){
     Route::get('/addUser', 'UserController@addUserPage');
 
     //Functions
+    //Get
+    Route::get('/detail', 'UserController@getUserDetailPage');
+
+    //Delete
+    Route::delete('/delete', 'UserController@deleteUser');
+});
+
+Route::prefix('role-management')->group(function(){
+    Route::get('/list', 'RoleController@getPage');
+
+    //Functions
+    //Get
+    Route::get('/detail', 'RoleController@getRoleDetailModal');
+
+    //Delete
+    Route::delete('/delete', 'RoleController@deleteRole');
+
+    //Put
+    Route::put('/update', 'RoleController@updateRole');
+
+    //Post
+    Route::post('/create', 'RoleController@createRole');
 });
 
 
