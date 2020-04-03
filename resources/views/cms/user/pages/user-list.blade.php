@@ -5,7 +5,7 @@
             <h2 class="ui header">
                 <i class="user icon"></i>
                 <div class="content">
-                        User List 
+                        User List
                     <div class="sub header">
                         Edit, and manage all users that has been linked on your shops.
                     </div>
@@ -16,6 +16,19 @@
 </section>
 
 <section class="ui grid segment">
+    <div class="doubling two column row">
+        <div class="column">
+            <button class="ui primary basic button" onclick="getPageWithoutToggle(USER);">
+                <i class="arrow left icon"></i> Back
+            </button>
+        </div>
+        <div class="column right aligned">
+            <button class="ui green button" onclick="getPageWithoutToggle();">
+                <i class="plus icon"></i> Add User
+            </button>
+        </div>
+    </div>
+
     <div class="doubling one column row center aligned">
         <div class="column">
             <div class="ui grid segment">
@@ -27,7 +40,7 @@
                         <option value="0">Email</option>
                     </select>
                 </div>
-                    
+
                 <div class="nine wide column">
                     <div class="ui icon fluid input">
                         <input type="text" name="" placeholder="Search...">
@@ -52,7 +65,7 @@
     </div>
 </section>
 
-{{-- @include('cms/user/functions/user-list/delete-user')
+{{-- @include('cms/user/functions/user-list/delete-user-modal')
 
 
 <script type="text/javascript">
