@@ -38,4 +38,14 @@ class LoginController extends Controller implements LoginControllerImpl
         else return redirect('/home');
 
     }
+
+    public function registerPage()
+    {
+        // TODO: Implement registerPage() method.
+    }
+
+    public function registerOwner()
+    {
+        // TODO: Implement registerOwner() method.
+    }
 }
