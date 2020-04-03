@@ -25,23 +25,50 @@ function saveCurrentPage(uri){
 
 //AJAX Page Request
 function getPageAjax(uri){
-    saveCurrentPage(uri);
-
     $.ajax({
         type: "GET",
         url: uri,
-        beforeSend: function(){
-            setTimeout(loadingOn(), 30000);
-        },
         dataType: "html",
         success: function(e){
             $('#page-child').html('');
             $('#page-child').append(e);
+            saveCurrentPage(uri);
             loadingOff();
         },
         error: function(xhr, status, error){
             loadingOff();
+            
+            switch(xhr.status){
+                case 0: 
+                    $('#error-modal-no-connection').modal('show');
+                break;
 
+                case 404:
+                    dynamicError("Page Not Found", "Requested uri: "+uri+" is not found.");
+                break;
+                default:
+                    dynamicError(xhr.statusText, "Please check your Controller BE-BE-an");
+            }
+        }
+    });
+}
+
+//AJAX Page Request with Request Body
+function getPageWithRequestBody(uri, data){
+    $.ajax({
+        type: "GET",
+        url: uri,
+        dataType: "html",
+        data: data,
+        success: function(e){
+            $('#page-child').html('');
+            $('#page-child').append(e);
+            saveCurrentPage(uri);
+            loadingOff();
+        },
+        error: function(xhr, status, error){
+            loadingOff();
+            
             switch(xhr.status){
                 case 0: 
                     $('#error-modal-no-connection').modal('show');
@@ -59,5 +86,9 @@ function getPageAjax(uri){
 
 function getPage(uri){
     exe();
+    getPageAjax(uri);
+}
+
+function getPageWithoutToggle(uri){
     getPageAjax(uri);
 }
