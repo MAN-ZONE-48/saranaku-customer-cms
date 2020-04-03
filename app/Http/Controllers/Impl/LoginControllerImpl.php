@@ -11,4 +11,6 @@ interface LoginControllerImpl
     public function logout();
     public function authenticate(Request $request);
     public function isLogin();
+    public function registerPage();
+    public function registerOwner();
 }
