@@ -35,7 +35,7 @@
             <i class="user icon"></i>
             Manage User
         </a>
-        <a class="item" onclick="getPage(CASHIER)">
+        <a class="item" onclick="getPage(TRANSACTION)">
             <i class="chart line icon"></i>
             Transaction
         </a>

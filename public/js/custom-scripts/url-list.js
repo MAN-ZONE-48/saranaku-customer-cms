@@ -1,6 +1,3 @@
-const TRANSACTION = "/transaction-management/";
-const CASHIER = "/transaction-management/cashier";
-
 //User Management
     //User
     const USER = "/user-management/";
@@ -12,5 +9,15 @@ const CASHIER = "/transaction-management/cashier";
     const ROLEDETAIL = "/role-management/detail";
     const ROLEDELETE = "/role-management/delete";
     const ROLEUPDATE = "/role-management/update";
+
+//Transaction Management
+    //Master
+    const TRANSACTION = "/transaction-management/";
+
+    //Cashier
+    const CASHIER = "/transaction-management/cashier";
+
+    //Calculator
+    const CALCULATOR = "/transaction-management/calculator";
 
 const HOME = "/cms/home/";

@@ -1,6 +1,5 @@
 <section class="ui grid">
-    <div class="doubling two column row center aligned">
-        <div class="column">
+        <div class="sixteen wide column">
             <a onclick="getPageWithoutToggle(USERLIST);">
             <div class="ui card">
                 <div class="content">
@@ -17,7 +16,9 @@
             </div>
             </a>
         </div>
-
+</section>
+<section class="ui width grid">
+    <div class="row">
         <div class="column">
             <a onclick="getPageWithoutToggle(ROLELIST);">
                 <div class="ui card">
