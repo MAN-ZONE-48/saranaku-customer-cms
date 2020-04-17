@@ -20,4 +20,16 @@
     //Calculator
     const CALCULATOR = "/transaction-management/calculator";
 
+    //Log
+    const TRANSACTIONLOG = "/transaction-management/transaction-log";
+
+//Stock Management
+    //Inventory
+    const INVENTORY = "/stock-management/";
+
+    //Stock
+
+    //Log
+    const INVENTORYLOG = "/stock-management/inventory-log";
+
 const HOME = "/cms/home/";

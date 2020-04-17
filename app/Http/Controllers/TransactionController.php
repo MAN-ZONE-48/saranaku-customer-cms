@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class TransactionController extends Controller
 {
-    //
+    public function getPage(){
+        return view('cms/transaction/transaction-home');
+    }
 }

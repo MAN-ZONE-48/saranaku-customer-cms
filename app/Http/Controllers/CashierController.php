@@ -8,7 +8,5 @@ use Illuminate\Http\Request;
 
 class CashierController extends Controller implements CashierControllerImpl
 {
-    public function getPage(){
-        return view('cms/transaction/transaction-home');
-    }
+
 }
