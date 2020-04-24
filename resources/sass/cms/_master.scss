@@ -16,3 +16,31 @@ div{
 body.pushable>.pusher{
     background: #202020;
 }
+
+a{
+    text-decoration: none !important;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none !important;
+    color: white;
+}
+
+.im-sorry-for-deleting-yu-anchor{
+    color: rgb(33, 100, 223);
+}
+
+.im-sorry-for-deleting-yu-anchor:hover{
+    text-decoration: underline !important;
+    color: rgb(16, 70, 170);
+}
+
+.black-nightly-placeholder::placeholder{
+    color: #000000;
+    opacity: 1.0;
+}
+
+textarea{
+    resize: none;
+}
