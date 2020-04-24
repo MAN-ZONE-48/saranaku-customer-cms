@@ -9,16 +9,15 @@
     <title>Saranaku - Your management friend</title>
 
     @yield('css_before')
-    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/bootstrap/mdb.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/semantic-ui/semantic.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/fawesome/all.css') }}" />
     <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet" />
 
     <style>
         body{
             overflow: hidden;
+            background: #E5E5E5;
+            background: #202020;
             font-family: 'Exo 2', sans-serif;
         }
 
@@ -30,53 +29,74 @@
             padding: 0;
             margin: 0;
         }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
     </style>
 
     @yield('css_after')
 
     <script type="text/javascript" src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/semantic.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/fawesome/all.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/custom-scripts/utilities/validations.js') }}"></script>
     @yield('js_before')
 </head>
-<body id="pixabay-backdrop" class="h-100 text-white">
-    <a href="/home">
-        <button type="button" class="btn btn-dark rounded-circle floatingActionButtonUpLeft"><i class="fa fa-2x fa-home"></i></button>
-    </a>
-
-    {{-- Login Box --}}
-    <section id="login-box">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12 d-flex justify-content-start">
-                    <h4 class="display-4 font-exo">Login</h4>
+<body id="pixabay-backdrop">
+    <section id="login-box" class="ui raised very padded text container segment">
+        <form method="POST" action="login" class="ui large form">
+            <h2 class="ui header">Login</h2>
+            <div class="ui grid">
+                <div class="sixteen wide column">
+                    <div class="field">
+                        <label>Username</label>
+                            <input type="text" name="username-textbox" placeholder="Username" />
+                    </div>
+                </div>
+                <div class="sixteen wide column">
+                    <div class="field">
+                        <label>Password</label>
+                        <input type="password" name="password-textbox" placeholder="Password" />
+                    </div>
                 </div>
             </div>
-            <br />
-            <form method="POST" action="/auth/login">
-                <div class="row no-gutters">
-                    <div class="col-12">
-                        <input type="text" class="pi-login-form-control" name="email" placeholder="Email@example.com" />
-                    </div>
+
+            <div class="ui grid">
+                <div class="sixteen wide column">
+                    <a href="javascript:void(0);" class="im-sorry-for-deleting-yu-anchor" onclick="$('#forgot-password-modal').modal('show');">Forgot your password?</a>
                 </div>
-                <br />
-                <div class="row no-gutters">
-                    <div class="col-12">
-                        <input type="password" class="pi-login-form-control" name="email" placeholder="Password" />
-                    </div>
+            </div>
+
+            <div class="ui right aligned grid">
+                <div class="sixteen wide column">
+                    <button type="submit" class="fluid ui teal large button">Login</button>
                 </div>
-                <br />
-                <div class="row no-gutters">
-                    <div class="col-12 d-flex justify-content-end">
-                        <button type="submit" class="ui inverted button">Login</button>
-                    </div>
+                <div class="sixteen wide column">
+                    <a href="/home">
+
+                    <button type="button" class="fluid ui black large button">
+                            Back to Dashboard
+                    </button>
+                </a>
+
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </section>
 
+    <footer>
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+              Saranaku 2020. All Rights Reserved.
+            </div>
+          </div>
+    </footer>
+
+    @include('auth/functions/forgot-password-modal')
 </body>
 </html>
