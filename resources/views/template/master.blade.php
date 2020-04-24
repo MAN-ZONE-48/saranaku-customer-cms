@@ -17,7 +17,7 @@
     <script type="text/javascript" src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     {{-- <script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('js/semantic.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script> --}}
     {{-- <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('js/fawesome/all.js') }}"></script>
 
@@ -104,7 +104,10 @@
         //Initialization
         var currentPage = {!! json_encode($currentPage) !!};
 
-        getPageAjax(currentPage);
+        if(currentPage === undefined || currentPage === null)
+            getPageAjax(HOME);
+        else
+            getPageAjax(currentPage);
     </script>
 </body>
 </html>

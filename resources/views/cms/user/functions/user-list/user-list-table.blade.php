@@ -6,13 +6,15 @@
         <td data-label="Phone">Co-Owner</td>
         <td data-label="Detail">
             <div class="ui icon buttons">
-                <a onclick="getPageWithoutToggle(USERDETAIL)">
-                    <button class="ui teal icon button">
-                        <i class="eye icon"></i>
-                    </button>
-                </a>
-                <button class="ui red icon button">
-                    <i class="trash alternate icon"></i>
+                <button class="ui teal icon button">
+                    <a onclick="getPageWithRequestBody(USERDETAIL, {lala: 'rere'});">
+                        <i class="search plus icon"></i> Detail
+                    </a>
+                </button>
+                <button class="ui red icon button" onclick="$('#delete-user-modal').modal('show');">
+                    <a href="javascript:void(0);">
+                        <i class="trash alternate icon"></i> Delete
+                    </a>
                 </button>
             </div>
         </td>
@@ -24,13 +26,15 @@
         <td data-label="Phone">Co-Owner</td>
         <td data-label="Detail">
             <div class="ui icon buttons">
-                <a onclick="getPageWithoutToggle(USERDETAIL)">
-                    <button class="ui teal icon button">
-                        <i class="eye icon"></i>
-                    </button>
-                </a>
+                <button class="ui teal icon button">
+                    <a onclick="getPageWithoutToggle(USERDETAIL);">
+                        <i class="search plus icon"></i> Detail
+                    </a>
+                </button>
                 <button class="ui red icon button">
-                    <i class="trash alternate icon"></i>
+                    <a href="javascript:void(0);">
+                        <i class="trash alternate icon"></i> Delete
+                    </a>
                 </button>
             </div>
         </td>
@@ -42,13 +46,15 @@
         <td data-label="Phone">Owner</td>
         <td data-label="Detail">
             <div class="ui icon buttons">
-                <a onclick="getPageWithoutToggle(USERDETAIL)">
-                    <button class="ui teal icon button">
-                        <i class="eye icon"></i>
-                    </button>
-                </a>
+                <button class="ui teal icon button">
+                    <a onclick="getPageWithoutToggle(USERDETAIL)">
+                        <i class="search plus icon"></i> Detail
+                    </a>
+                </button>
                 <button class="ui red icon button">
-                    <i class="trash alternate icon"></i>
+                    <a href="javascript:void(0);">
+                        <i class="trash alternate icon"></i> Delete
+                    </a>
                 </button>
             </div>
         </td>

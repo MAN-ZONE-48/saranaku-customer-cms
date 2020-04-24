@@ -18,12 +18,12 @@
 <section class="ui grid segment">
     <div class="doubling two column row">
         <div class="column">
-            <button class="ui primary basic button" onclick="getPageWithoutToggle(USER);">
+            <button class="ui primary basic button" onclick="getPageWithoutToggle(HOME);">
                 <i class="arrow left icon"></i> Back
             </button>
         </div>
         <div class="column right aligned">
-            <button class="ui green button" onclick="getPageWithoutToggle();">
+            <button class="ui green button" onclick="$('#add-new-user-modal').modal('show');">
                 <i class="plus icon"></i> Add User
             </button>
         </div>
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <table class="ui celled striped table">
+            <table class="ui celled striped large table">
                 <thead>
                     <tr class="center aligned">
                         <th>Fullname</th>
@@ -65,9 +65,7 @@
     </div>
 </section>
 
-{{-- @include('cms/user/functions/user-list/delete-user-modal')
+@include('cms/user/functions/user-list/add-user-modal')
 
+@include('cms/user/functions/user-list/delete-user')
 
-<script type="text/javascript">
-    $('#hwe').modal('show');
-</script> --}}

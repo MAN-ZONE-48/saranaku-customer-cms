@@ -18,7 +18,7 @@
 <section class="ui grid segment">
     <div class="doubling one column row">
         <div class="column">
-            <button class="ui primary basic button" onclick="getPageWithoutToggle(USER);">
+            <button class="ui primary basic button" onclick="getPageWithoutToggle(HOME);">
                 <i class="arrow left icon"></i> Back
             </button>
         </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <table class="ui celled striped table">
+            <table class="ui celled striped large table">
                 <thead>
                     <tr class="center aligned">
                         <th>No</th>

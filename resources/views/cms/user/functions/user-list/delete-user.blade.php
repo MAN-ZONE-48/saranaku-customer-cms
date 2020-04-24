@@ -1,4 +1,4 @@
-<div id="hwe" class="ui tiny modal">
+<div id="delete-user-modal" class="ui tiny modal">
     <i class="close icon"></i>
     <div class="header">
         Delete Confirmation
