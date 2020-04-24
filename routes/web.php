@@ -28,6 +28,13 @@ Route::prefix('/stock-management')->group(function(){
 
 Route::prefix('/transaction-management')->group(function(){
     Route::get('/', 'TransactionController@getPage');
+
+    //Cashier
+    Route::get('/cashier', 'TransactionController@cashierPage');
+});
+
+Route::prefix('/inventory-management')->group(function(){
+    Route::get('/list', 'InventoryController@stockListPage');
 });
 
 Route::prefix('/cms')->group(function(){
