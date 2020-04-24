@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Impl;
 use Illuminate\Http\Request;
 
 //Buat ngatur Stock
-interface StockControllerImpl{
+interface InventoryControllerImpl{
     public function getPage();
     public function createStockPage();
     public function createInventoryTypePage();
