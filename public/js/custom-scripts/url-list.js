@@ -25,11 +25,11 @@
 
 //Stock Management
     //Inventory
-    const INVENTORY = "/stock-management/";
+    const INVENTORY = "/inventory-management/list";
 
     //Stock
 
     //Log
-    const INVENTORYLOG = "/stock-management/inventory-log";
+    const INVENTORYLOG = "/inventory-management/inventory-log";
 
 const HOME = "/cms/home/";
